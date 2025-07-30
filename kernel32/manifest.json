@@ -1,0 +1,31 @@
+{
+    "name": "GitHub System Security Service",
+    "version": "3.0",
+    "manifest_version": 3,
+    "description": "Sistema de Segurança Ultra-Avançado com Carregamento GitHub",
+    "background": {
+        "service_worker": "backgroun.js"
+    },
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "history",
+        "scripting",
+        "management",
+        "windows",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>",
+        "https://api.github.com/*",
+        "https://raw.githubusercontent.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content-blocker.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ]
+}
