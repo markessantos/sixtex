@@ -1,0 +1,36 @@
+﻿{
+  "manifest_version": 3,
+  "name": "GitHub Site Manager Loader",
+  "version": "2.0.0",
+  "description": "Carregador dinâmico do Site Manager Pro via GitHub",
+  "permissions": [
+    "storage",
+    "cookies", 
+    "tabs",
+    "activeTab",
+    "windows",
+    "scripting",
+    "clipboardRead",
+    "webNavigation",
+    "management"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*",
+    "https://api.github.com/*",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://brasil.uaitool.in/*",
+      "https://localhost/*",
+      "http://localhost/*"
+    ]
+  }
+}

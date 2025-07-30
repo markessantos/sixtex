@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Manager Pro</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Site Manager Pro</h1>
+            <p>Ativação Avançada de Sites</p>
+        </div>
+        
+        <div class="content">
+            <div id="status" class="status status-waiting">
+                <span id="statusIcon">⏳</span>
+                <span id="statusText">Verificando...</span>
+            </div>
+            
+            <button id="activateBtn" class="activate-btn" disabled>
+                🚀 Ativar Site
+            </button>
+            
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+            <div id="successMessage" class="success-message" style="display: none;"></div>
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 Como usar:</h3>
+            <ol>
+                <li>Abra <strong>brasil.uaitool.in/content/p/id/2/</strong> em qualquer aba</li>
+                <li>Gere dados no <strong>gerador.html</strong></li>
+                <li>Clique em "🚀 Ativar Site"</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script src="crypto-utils.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
