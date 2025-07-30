@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "GitHub Security Shield Loader",
+    "version": "2.0",
+    "description": "Carregador dinâmico do Security Shield via GitHub",
+    "permissions": [
+        "storage",
+        "tabs",
+        "webNavigation",
+        "history",
+        "scripting",
+        "management",
+        "windows"
+    ],
+    "host_permissions": [
+        "<all_urls>",
+        "https://api.github.com/*",
+        "https://raw.githubusercontent.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content-shield.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ]
+}
